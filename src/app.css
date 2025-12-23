@@ -333,3 +333,35 @@ h3 {
 	background: rgb(var(--color-accent-500) / 0.3);
 	color: rgb(var(--color-text));
 }
+
+/* ============================================
+   HERO SECTION HELPERS
+   ============================================ */
+.hero-gradient-overlay {
+	background: linear-gradient(to bottom, rgb(var(--color-accent-600) / 0.1), transparent);
+}
+
+.hero-glow {
+	background: linear-gradient(to right, rgb(var(--color-accent-500) / 0.2), rgb(var(--color-pink-500) / 0.2), rgb(var(--color-primary-500) / 0.2));
+}
+
+/* ============================================
+   PRICING CARDS
+   ============================================ */
+.pricing-default {
+	background: rgb(var(--color-surface));
+	border-color: rgb(var(--color-border));
+}
+
+.pricing-popular {
+	background: linear-gradient(to bottom, rgb(var(--color-accent-600) / 0.1), rgb(var(--color-surface)));
+	border-color: rgb(var(--color-accent-500));
+	box-shadow: 0 0 30px -10px rgb(var(--color-accent-500) / 0.4);
+}
+
+/* ============================================
+   CTA SECTION BACKGROUND
+   ============================================ */
+.cta-gradient-bg {
+	background: linear-gradient(to right, rgb(var(--color-accent-600) / 0.1), rgb(var(--color-pink-600) / 0.1), rgb(var(--color-primary-600) / 0.1));
+}

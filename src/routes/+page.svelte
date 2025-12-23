@@ -150,8 +150,8 @@
 <!-- Hero Section -->
 <section id="hero" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
 	<!-- Background gradient -->
-	<div class="absolute inset-0 bg-gradient-to-b from-[rgb(var(--color-accent-600)/0.1)] via-transparent to-transparent"></div>
-	<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-gradient-to-r from-[rgb(var(--color-accent-500)/0.2)] via-[rgb(var(--color-pink-500)/0.2)] to-[rgb(var(--color-primary-500)/0.2)] blur-3xl rounded-full opacity-50"></div>
+	<div class="absolute inset-0 hero-gradient-overlay"></div>
+	<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] hero-glow blur-3xl rounded-full opacity-50"></div>
 
 	<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
 		<div class="text-center max-w-4xl mx-auto">
@@ -389,15 +389,7 @@
 
 		<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 			{#each pricingPlans as plan}
-				<div
-					class="relative p-8 rounded-2xl border transition-all hover:shadow-xl"
-					class:bg-gradient-to-b={plan.popular}
-					class:from-[rgb(var(--color-accent-600)/0.1)]={plan.popular}
-					class:to-transparent={plan.popular}
-					class:border-[rgb(var(--color-accent-500))]={plan.popular}
-					class:bg-[rgb(var(--color-surface))]={!plan.popular}
-					class:border-[rgb(var(--color-border))]={!plan.popular}
-				>
+				<div class="relative p-8 rounded-2xl border transition-all hover:shadow-xl {plan.popular ? 'pricing-popular' : 'pricing-default'}">
 					{#if plan.popular}
 						<div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full text-xs font-semibold text-white" style="background: var(--gradient-cta);">
 							Most Popular
@@ -456,10 +448,9 @@
 						class="w-full px-6 py-5 flex items-center justify-between text-left"
 					>
 						<span class="font-semibold text-[rgb(var(--color-text))]">{faq.question}</span>
-						<ChevronDown
-							class="w-5 h-5 text-[rgb(var(--color-text-muted))] transition-transform"
-							class:rotate-180={openFaq === i}
-						/>
+						<span class="transition-transform {openFaq === i ? 'rotate-180' : ''}">
+							<ChevronDown class="w-5 h-5 text-[rgb(var(--color-text-muted))]" />
+						</span>
 					</button>
 					{#if openFaq === i}
 						<div class="px-6 pb-5">
@@ -475,7 +466,7 @@
 <!-- CTA Section -->
 <section class="py-20 lg:py-32 relative overflow-hidden">
 	<!-- Background -->
-	<div class="absolute inset-0 bg-gradient-to-r from-[rgb(var(--color-accent-600)/0.1)] via-[rgb(var(--color-pink-600)/0.1)] to-[rgb(var(--color-primary-600)/0.1)]"></div>
+	<div class="absolute inset-0 cta-gradient-bg"></div>
 
 	<div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 		<h2 class="text-[rgb(var(--color-text))] mb-6">Ready to ensure accessibility compliance?</h2>
