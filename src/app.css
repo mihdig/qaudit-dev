@@ -365,3 +365,18 @@ h3 {
 .cta-gradient-bg {
 	background: linear-gradient(to right, rgb(var(--color-accent-600) / 0.1), rgb(var(--color-pink-600) / 0.1), rgb(var(--color-primary-600) / 0.1));
 }
+
+/* ============================================
+   PROBLEM SECTION ICON BOXES
+   ============================================ */
+.icon-box-error {
+	background: rgb(var(--color-error) / 0.1);
+}
+
+.icon-box-warning {
+	background: rgb(var(--color-warning) / 0.1);
+}
+
+.icon-box-accent {
+	background: rgb(var(--color-accent-500) / 0.1);
+}

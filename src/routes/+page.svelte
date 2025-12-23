@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Shield, Zap, Eye, FileText, Palette, Bot, Check, ArrowRight, Play, ChevronDown } from 'lucide-svelte';
+	import { Shield, Zap, Eye, FileText, Palette, Bot, Check, ArrowRight, Play, ChevronDown, DollarSign, Scale, UserX } from 'lucide-svelte';
 
 	let url = $state('');
 	let isScanning = $state(false);
@@ -304,17 +304,23 @@
 
 		<div class="grid md:grid-cols-3 gap-8">
 			<div class="p-8 rounded-2xl bg-[rgb(var(--color-surface))] border border-[rgb(var(--color-border))]">
-				<div class="text-4xl mb-4">💸</div>
+				<div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 icon-box-error">
+					<DollarSign class="w-7 h-7 text-[rgb(var(--color-error))]" />
+				</div>
 				<h3 class="text-xl font-semibold text-[rgb(var(--color-text))] mb-2">Manual Audits Cost $5K-50K</h3>
 				<p class="text-[rgb(var(--color-text-secondary))]">Traditional accessibility consultants charge thousands for a single audit. Most businesses can't afford regular testing.</p>
 			</div>
 			<div class="p-8 rounded-2xl bg-[rgb(var(--color-surface))] border border-[rgb(var(--color-border))]">
-				<div class="text-4xl mb-4">⚖️</div>
+				<div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 icon-box-warning">
+					<Scale class="w-7 h-7 text-[rgb(var(--color-warning))]" />
+				</div>
 				<h3 class="text-xl font-semibold text-[rgb(var(--color-text))] mb-2">Legal Risks Increasing Daily</h3>
 				<p class="text-[rgb(var(--color-text-secondary))]">EAA enforcement began June 2025. Companies face fines, lawsuits, and reputational damage from non-compliance.</p>
 			</div>
 			<div class="p-8 rounded-2xl bg-[rgb(var(--color-surface))] border border-[rgb(var(--color-border))]">
-				<div class="text-4xl mb-4">🚫</div>
+				<div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 icon-box-accent">
+					<UserX class="w-7 h-7 text-[rgb(var(--color-accent-500))]" />
+				</div>
 				<h3 class="text-xl font-semibold text-[rgb(var(--color-text))] mb-2">15% of Users Excluded</h3>
 				<p class="text-[rgb(var(--color-text-secondary))]">Over 1 billion people worldwide have disabilities. Inaccessible websites lose customers and market share.</p>
 			</div>
